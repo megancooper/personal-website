@@ -1,0 +1,14 @@
+@mixin font($font-family, $font-file) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-file+'.ttf');
+    src: url($font-file+'.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include font('Overpass', 'fonts/Overpass/Overpass-Regular');
+@include font('Overpass-Bold', 'fonts/Overpass/Overpass-ExtraBold');
+@include font('RobotoMono', 'fonts/RobotoMono/RobotoMono-Regular');
+@include font('Rubik', 'fonts/Rubik/Rubik-Medium');

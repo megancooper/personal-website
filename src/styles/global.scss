@@ -1,0 +1,23 @@
+/* Global Styling */
+@import './fonts/fonts';
+@import './colors.scss';
+
+*, 
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+}
+
+
+/* Components */
+@import './components/header.scss';
+@import './components/footer.scss';
+
+/* Containers */
+@import './containers/home.scss';
+@import './containers/download.scss';

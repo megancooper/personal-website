@@ -1,0 +1,62 @@
+{
+  "extends": ["react-app"],
+  "rules": {
+    "max-len": [
+      "warn",
+      125,
+      {
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "array-bracket-spacing": [2, "never"],
+    "semi": [1, "always"],
+    "semi-spacing": 2,
+    "object-curly-spacing": ["warn", "always"],
+    "no-use-before-define": 0,
+    "keyword-spacing": 1,
+    "key-spacing": [
+      1,
+      {
+        "align": "colon"
+      }
+    ],
+    "space-before-blocks": 1,
+    "eol-last": 2,
+    "no-multiple-empty-lines": [
+      2,
+      {
+        "max": 2,
+        "maxEOF": 0
+      }
+    ],
+    "comma-style": [2, "last"],
+    "comma-dangle": [2, "never"],
+    "no-extra-semi": 2,
+    "jsx-quotes": [2, "prefer-single"],
+    "no-unneeded-ternary": 1,
+    "space-in-parens": [2, "never"],
+    "space-before-function-paren": [2, "never"],
+    "space-infix-ops": 2,
+    "space-unary-ops": 2,
+    "no-trailing-spaces": 1,
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "constructor-super": 2,
+    "prefer-const": 2,
+    "no-var": 2,
+    "prefer-template": 2,
+    "template-curly-spacing": 2,
+    "no-useless-constructor": 2,
+    "object-shorthand": 2,
+    "indent": [1, 2],
+    "react/boolean-prop-naming": ["warn", { "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+" }],
+    "react/jsx-sort-props": [1],
+    "react/sort-prop-types": "warn",
+    "react/prefer-stateless-function": [2],
+    "react/prop-types": [2]
+  }
+}
+  
