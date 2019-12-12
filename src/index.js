@@ -1,28 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
-import configureStore from './store';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './containers/Home';
-import Download from './containers/Download';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import * as serviceWorker from './serviceWorker';
+// import Header from './components/Header';
+// import Footer from './components/Footer';
+// import Home from './containers/Home';
+import Work from './containers/Work';
+import Nav from './components/Nav';
 // import Redirect from './components/Redirect';
 import './styles/global.scss';
 
-const initialState = {};
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
 
-export const store = configureStore(initialState);
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Header />
+  <div>
+    <Nav />
     <Router>
-      <Route component={Download} exact path='/download' />
-      <Route component={Home} exact path='/home' />
-      <Route component={Home} exact path='/' />
+      <Route component={Work} exact path='/work' />
+      {/* <Route component={App} exact path='/home' /> */}
+      <Route component={Work} exact path='/' />
     </Router>
-    <Footer />
-  </Provider>,
+    {/* <Footer /> */}
+  </div>,
   document.getElementById('root')
 );

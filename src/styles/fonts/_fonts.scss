@@ -7,8 +7,8 @@
     font-style: normal;
   }
 }
-
-@include font('Overpass', 'fonts/Overpass/Overpass-Regular');
-@include font('Overpass-Bold', 'fonts/Overpass/Overpass-ExtraBold');
-@include font('RobotoMono', 'fonts/RobotoMono/RobotoMono-Regular');
-@include font('Rubik', 'fonts/Rubik/Rubik-Medium');
+  
+@include font('FiraCode', 'FiraCode/FiraCode-Regular');
+@include font('FiraCode-Bold', 'FiraCode/FiraCode-Bold');
+@include font('NotoSans', 'NotoSans/NotoSans-Regular');
+@include font('NotoSans-Bold', 'NotoSans/NotoSans-Bold');

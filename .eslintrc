@@ -43,7 +43,7 @@
     "space-infix-ops": 2,
     "space-unary-ops": 2,
     "no-trailing-spaces": 1,
-    "quotes": [2, "single", { "avoidEscape": true }],
+    "quotes": [2, "single", { "avoidEscape": false }],
     "constructor-super": 2,
     "prefer-const": 2,
     "no-var": 2,
@@ -52,11 +52,8 @@
     "no-useless-constructor": 2,
     "object-shorthand": 2,
     "indent": [1, 2],
-    "react/boolean-prop-naming": ["warn", { "rule": "^(is|has)[A-Z]([A-Za-z0-9]?)+" }],
     "react/jsx-sort-props": [1],
     "react/sort-prop-types": "warn",
-    "react/prefer-stateless-function": [2],
     "react/prop-types": [2]
   }
 }
-  

@@ -9,7 +9,7 @@
           "chrome": "58",
           "ie": "11",
           "electron": "4"   
-      }
+      },
     }]
   ],
   "plugins": [

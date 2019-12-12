@@ -1,54 +1,37 @@
 {
   "name": "personal-website",
-  "version": "1.0.0",
-  "description": "personal website",
-  "main": "src/index.js",
-  "homepage": "https://megancooper.io",
-  "scripts": {
-    "build": "webpack --config webpack.config.js --color -p --progress --hide-modules --display-optimization-bailout",
-    "build:prod": "webpack --config webpack.prod.js --color",
-    "start": "webpack-dev-server --hot",
-    "dev": "npm-run-all --parallel build start",
-    "predeploy": "npm run build:prod",
-    "deploy": "gh-pages -d docs"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/megancooper/personal-website.git"
-  },
-  "author": "Megan Cooper",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/megancooper/personal-website/issues"
-  },
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "chroma-js": "^2.0.6",
-    "core-js": "^2.5.7",
-    "prop-types": "^15.7.2",
-    "react": "16.x.x",
-    "react-dom": "^16.10.2",
-    "react-redux": "7.x.x",
-    "react-router-dom": "5.x.x",
-    "react-spinners": "0.x.x",
-    "redux": "4.x.x",
-    "redux-thunk": "2.x.x",
-    "styled-components": "^4.4.0"
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "node-sass": "^4.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.3.0",
+    "styled-components": "^4.4.1"
   },
-  "devDependencies": {
-    "@babel/core": "^7.6.4",
-    "@babel/node": "^7.6.3",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/preset-env": "^7.6.3",
-    "@babel/preset-react": "^7.6.3",
-    "copy-webpack-plugin": "5.x.x",
-    "express": "^4.17.1",
-    "gh-pages": "^2.1.1",
-    "html-webpack-plugin": "3.x.x",
-    "node-sass": "^4.12.0",
-    "npm-run-all": "^4.1.5",
-    "react-scripts": "3.x.x",
-    "webpack": "4.x.x",
-    "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.2"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
