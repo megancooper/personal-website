@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 // import Header from './components/Header';
 // import Footer from './components/Footer';
 // import Home from './containers/Home';
-import Work from './containers/Work';
+import Projects from './containers/Projects';
+import Resume from './containers/Resume';
+import About from './containers/About';
 import Nav from './components/Nav';
 // import Redirect from './components/Redirect';
 import './styles/global.scss';
@@ -20,9 +22,13 @@ ReactDOM.render(
   <div>
     <Nav />
     <Router>
-      <Route component={Work} exact path='/work' />
-      {/* <Route component={App} exact path='/home' /> */}
-      <Route component={Work} exact path='/' />
+      <Switch>
+        <Route component={Projects} exact path='/projects' />
+        <Route component={Resume} exact path='/resume' />
+        <Route component={About} exact path='/about' />
+        <Route component={About} exact path='/' />
+        <Route component={About} />
+      </Switch>
     </Router>
     {/* <Footer /> */}
   </div>,

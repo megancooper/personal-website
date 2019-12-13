@@ -42,7 +42,7 @@ class Nav extends Component {
     return (
       <nav id='nav'>
         <Menu>
-          <Link href='/work'>Work</Link>
+          <Link href='/projects'>Projects</Link>
           <Link href='/resume'>Resume</Link>
           <Link href='/about'>About</Link>
         </Menu>

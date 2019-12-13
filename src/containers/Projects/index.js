@@ -87,7 +87,7 @@ const comingSoonStyle = {
   marginRight: 0
 };
 
-class Work extends Component {
+class Projects extends Component {
 
   render() {
     return (
@@ -98,8 +98,8 @@ class Work extends Component {
             <Icon src={melo}/>
             <CardTitle href='https://www.melo-app.org' target='_blank'>melo</CardTitle>
             <Description>
-             Melo is a simple music organizer that allows you to play and beautifully
-             visualize the music audio files on your computer.
+             Melo is a simple music player that allows you to play and beautifully
+             organize the audio files on your computer.
             </Description>
           </Card>
           <Card style={comingSoonStyle}>
@@ -111,4 +111,4 @@ class Work extends Component {
   }
 }
 
-export default Work;
+export default Projects;
