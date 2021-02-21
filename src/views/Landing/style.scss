@@ -1,0 +1,23 @@
+.landing {
+  list-style-type: none;
+  font-size: 0.85rem;
+  color: #333;
+  max-width: 500px;
+  letter-spacing: 0.5px;
+  line-height: 1.5rem;
+
+  img {
+    height: 10rem;
+    width: 15rem;
+  }
+
+  li { margin-top: 1rem; }
+
+  li:last-of-type {
+    a {
+      color: #333;
+      border-color: #333;
+      border-bottom-style: dotted;
+    }
+  }
+}
