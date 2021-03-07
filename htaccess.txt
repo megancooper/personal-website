@@ -3,3 +3,7 @@ RewriteRule ^index\.html$ - [L]
  RewriteCond %{REQUEST_FILENAME} !-f
  RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.html [L]
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?megancooper\.io
+RewriteRule ^(.*)$ https://www.megancooper.io/$1 [R,L]
