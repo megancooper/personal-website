@@ -1,37 +1,40 @@
 {
-  "name": "personal-website",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "node-sass": "^4.13.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.0",
-    "styled-components": "^4.4.1"
-  },
+  "name": "nextjs-typescript-tailwindcss",
+  "version": "1.0.0",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "dependencies": {
+    "classnames": "2.2.6",
+    "date-fns": "2.10.0",
+    "gray-matter": "4.0.2",
+    "next": "latest",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "remark": "11.0.2",
+    "remark-html": "10.0.0",
+    "sass": "^1.36.0",
+    "typescript": "^4.0.3"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/jest": "^25.2.2",
+    "@types/node": "^14.0.1",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "autoprefixer": "^10.2.1",
+    "eslint": "7.x.x",
+    "eslint-config-airbnb-typescript": "12.x.x",
+    "eslint-plugin-import": "2.x.x",
+    "eslint-plugin-jsx-a11y": "6.x.x",
+    "eslint-plugin-react": "7.x.x",
+    "eslint-plugin-react-hooks": "4.x.x",
+    "postcss": "^8.2.4",
+    "tailwindcss": "^2.0.2"
+  },
+  "license": "MIT"
 }
