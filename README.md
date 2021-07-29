@@ -1,1 +1,4 @@
-# NextJS + Typescript + TailwindCSS Template
+# Personal Website
+
+This repo holds the site for [@megancooper](https://megancooper.io)
+
