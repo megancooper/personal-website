@@ -30,9 +30,9 @@ const Index = () => (
       </li>
 
       <li>
-        Also trying to write about stuff
+        Checkout my
         {' '}
-        <Link href="/blog">sometimes</Link>
+        <Link href="/blog">blog</Link>
         .
       </li>
 

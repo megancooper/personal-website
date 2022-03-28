@@ -1,8 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import {getAllPosts, Post} from '../../utils/posts';
 
-const Blog = () => (
+interface BlogProps {
+  posts: Post[];
+}
+
+const Blog = ({posts}: BlogProps) => (
   <>
     <Head>
       <title>Blog</title>
@@ -13,16 +18,24 @@ const Blog = () => (
         <li>
           »
           {' '}
-          <Link href="/">
-            <a className="text-gray-700 border-gray-700">
-              How to grow as a beginner Software Engineer
-            </a>
-          </Link>
+          {posts.map(({slug, title}) => (
+            <Link key={slug} href={`/blog/${slug}`}>
+              <a className="text-gray-700 border-gray-700">{title}</a>
+            </Link>
+          ))}
         </li>
-
       </ul>
     </div>
   </>
 );
 
 export default Blog;
+
+export const getStaticProps = async () => {
+  const posts = getAllPosts(['slug', 'title']);
+  return {
+    props: {
+      posts,
+    },
+  };
+};
