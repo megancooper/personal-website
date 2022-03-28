@@ -67,8 +67,8 @@ const BlogPost = ({post}: PostProps) => {
           </Head>
           <Center className={classes.wrapper}>
             <div className={classes.blogPost}>
-              <Link href="/blog">
-                <a className={cx('nav-link', classes.backLink)}>← Back to all posts</a>
+              <Link href="/">
+                <a className={cx('nav-link', classes.backLink)}>← Back home</a>
               </Link>
               <ReactMarkdown>{post.content}</ReactMarkdown>
             </div>

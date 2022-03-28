@@ -1,8 +1,13 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import {getAllPosts, Post} from '../utils/posts';
 
-const Index = () => (
+interface Props {
+  posts: Post[];
+}
+
+const Index = ({posts}: Props) => (
   <>
     <Head>
       <title>Home</title>
@@ -17,11 +22,17 @@ const Index = () => (
         I enjoy writing code and wearing wacky socks.
       </li>
 
+      <li><a href="https://drive.google.com/file/d/1fRVHauEzUkNUbLVnBCMSecJZ-B1lIflD/view?usp=sharing" rel="noopener noreferrer" target="_blank">Resume</a></li>
+
+      <li><a href="mailto: megancooper1000@gmail.com">megancooper1000@gmail.com</a></li>
+
       <li>
-        Currently working on some projects:
+        Current projects:
 
         <ul>
-          <li>
+          <li className="ml-4">
+            »
+            {' '}
             <a target="_blank" rel="noreferrer" href="https://www.melo-app.org">Melo</a>
             {' '}
             - A simple music player.
@@ -30,18 +41,31 @@ const Index = () => (
       </li>
 
       <li>
-        Checkout my
-        {' '}
-        <Link href="/blog">blog</Link>
-        .
+        Blog posts:
+        <ul className="list-none">
+          <li className="ml-4">
+            »
+            {' '}
+            {posts.map(({slug, title}) => (
+              <Link key={slug} href={`/blog/${slug}`}>
+                <a className="text-gray-700 border-gray-700">{title}</a>
+              </Link>
+            ))}
+          </li>
+        </ul>
       </li>
-
-      <li><a href="https://drive.google.com/file/d/1fRVHauEzUkNUbLVnBCMSecJZ-B1lIflD/view?usp=sharing" rel="noopener noreferrer" target="_blank">Resume</a></li>
-
-      <li><a href="mailto: megancooper1000@gmail.com">megancooper1000@gmail.com</a></li>
 
     </ul>
   </>
 );
 
 export default Index;
+
+export const getStaticProps = async () => {
+  const posts = getAllPosts(['slug', 'title']);
+  return {
+    props: {
+      posts,
+    },
+  };
+};
