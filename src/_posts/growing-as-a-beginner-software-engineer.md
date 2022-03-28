@@ -1,9 +1,9 @@
 ---
-title: Growing as a beginner software engineer
+title: Habits to grow as a software engineer
 date: 2022-03-27
 ---
 
-# Growing as a beginner software engineer
+# Habits to grow as a software engineer
 
 *March 27, 2022*
 
