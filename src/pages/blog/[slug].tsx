@@ -5,6 +5,8 @@ import Link from 'next/link';
 import cx from 'classnames';
 import {createStyles, Loader, Center} from '@mantine/core';
 import ReactMarkdown from 'react-markdown';
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
+import {dark} from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import {getAllPosts, getPostBySlug, Post} from '../../utils/posts';
 
 interface PostProps {
@@ -14,12 +16,15 @@ interface PostProps {
 const useStyles = createStyles(theme => ({
   wrapper: {
     margin: '0 auto',
-    padding: '0 4rem',
+    padding: '0 2rem',
+    width: 'fit-content',
     [theme.fn.largerThan('sm')]: {
+      width: 'auto',
       padding: '0 8rem',
     },
     [theme.fn.largerThan('md')]: {
-      padding: '0 20rem',
+      padding: 'initial',
+      width: 700,
     },
   },
   backLink: {
@@ -40,6 +45,16 @@ const useStyles = createStyles(theme => ({
     },
     p: {
       marginBottom: '2rem',
+    },
+    code: {
+      textShadow: 'none !important',
+    },
+    ol: {
+      listStyle: 'decimal',
+      paddingLeft: '2rem',
+      li: {
+        marginTop: 0,
+      },
     },
   },
 }));
@@ -70,7 +85,39 @@ const BlogPost = ({post}: PostProps) => {
               <Link href="/">
                 <a className={cx('nav-link', classes.backLink)}>← Back home</a>
               </Link>
-              <ReactMarkdown>{post.content}</ReactMarkdown>
+              <ReactMarkdown
+                components={{
+                  code({
+                    // eslint-disable-next-line react/prop-types
+                    node, inline, className, children, ...props
+                  }) {
+                    const match = /language-(\w+)/.exec(className || '');
+                    return !inline && match ? (
+                      <SyntaxHighlighter
+                        // eslint-disable-next-line react/no-children-prop
+                        children={String(children).replace(/\n$/, '')}
+                        style={dark}
+                        language={match[1]}
+                        PreTag="div"
+                        customStyle={{
+                          border: 'none',
+                          boxShadow: 'none',
+                          fontFamily: 'Fira-Code',
+                          textShadow: 'none',
+                          marginBottom: '3rem',
+                        }}
+                        {...props}
+                      />
+                    ) : (
+                      <code className={className} {...props}>
+                        {children}
+                      </code>
+                    );
+                  },
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
             </div>
           </Center>
         </article>
