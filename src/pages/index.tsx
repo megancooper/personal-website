@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import {createStyles, Center} from '@mantine/core';
+import Image from '../components/Image';
 import {getAllPosts, Post} from '../utils/posts';
 
 interface Props {
@@ -29,7 +29,7 @@ const Index = ({posts}: Props) => {
       <Center className={classes.wrapper}>
         <ul className="ml-6 lg:ml-8 list-none text-sm text-black max-w-lg tracking-wide leading-6">
           <li>
-            <Image alt="profile" src="/assets/profile.jpg" height={160} width={240} quality={100} />
+            <Image alt="profile" src="profile.jpg" height="160" width="240" />
           </li>
           <li>
             Hello! I&apos;m Megan, a software engineer based in Austin, TX.

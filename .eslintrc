@@ -24,5 +24,6 @@
         "array-bracket-spacing": ["error", "never"],
         "object-curly-spacing": ["error", "never"],
         "semi": ["error", "always"]
-    }
+    },
+    "ignorePatterns": ["next.config.js"]
 }
