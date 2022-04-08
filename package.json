@@ -48,7 +48,7 @@
     "eslint-plugin-jsx-a11y": "6.x.x",
     "eslint-plugin-react": "7.x.x",
     "eslint-plugin-react-hooks": "4.x.x",
-    "postcss": "8.2.4",
+    "postcss": "8.2.13",
     "tailwindcss": "2.0.2"
   },
   "license": "MIT"
