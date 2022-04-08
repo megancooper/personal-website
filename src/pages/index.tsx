@@ -56,10 +56,10 @@ const Index = ({posts}: Props) => {
           </li>
 
           <li>
-            Blog posts: (ordered by date ascending)
+            Blog posts: (ordered by most recent)
             <ul className="list-none">
               {posts.map(({slug, title}) => (
-                <li className="ml-4 mt-0" key={slug}>
+                <li className="ml-4 mt-2" key={slug}>
                   »
                   {' '}
                   <Link href={`/blog/${slug}`}>
