@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import {AppProps} from 'next/app';
 import {MantineProvider} from '@mantine/core';
-import '../../styles/index.css';
 
 const App = ({Component, pageProps}: AppProps) => (
   <>

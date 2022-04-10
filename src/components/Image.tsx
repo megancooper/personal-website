@@ -5,10 +5,11 @@ interface Props {
   width: string;
   height: string;
   alt: string;
+  className?: string;
 }
 
 const Image = ({
-  src, width, height, alt,
+  src, width, height, alt, className,
 }: Props): JSX.Element => {
   const webp = require(`../../public/assets/${src}?resize&format=webp`);
   const img = require(`../../public/assets/${src}?resize`);
@@ -22,9 +23,14 @@ const Image = ({
         width={width}
         height={height}
         alt={alt}
+        className={className}
       />
     </picture>
   );
+};
+
+Image.defaultProps = {
+  className: '',
 };
 
 export default Image;

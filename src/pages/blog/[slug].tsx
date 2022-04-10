@@ -2,7 +2,6 @@ import {useRouter} from 'next/router';
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 import Link from 'next/link';
-import cx from 'classnames';
 import {createStyles, Loader, Center} from '@mantine/core';
 import ReactMarkdown from 'react-markdown';
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter';
@@ -15,7 +14,7 @@ interface PostProps {
 
 const useStyles = createStyles(theme => ({
   wrapper: {
-    margin: '0 auto',
+    margin: '3rem auto',
     padding: '0 2rem',
     width: 'fit-content',
     [theme.fn.largerThan('sm')]: {
@@ -72,18 +71,17 @@ const BlogPost = ({post}: PostProps) => {
       {router.isFallback ? (
         <div><Center><Loader /></Center></div>
       ) : (
-        <article className="mb-32">
+        <article>
           <Head>
             <title>
               {post.title}
-              {' '}
-              | Megan Cooper
+              &nbsp;|&nbsp;Megan Cooper
             </title>
           </Head>
           <Center className={classes.wrapper}>
             <div className={classes.blogPost}>
               <Link href="/">
-                <a className={cx('nav-link', classes.backLink)}>← Back home</a>
+                <a className={classes.backLink}>← Back home</a>
               </Link>
               <ReactMarkdown
                 components={{
