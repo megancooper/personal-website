@@ -1,8 +1,11 @@
 const withPlugins = require('next-compose-plugins');
 const withOptimizedImages = require('next-optimized-images');
-const withBundleAnalyzer = require('@next/bundle-analyzer')
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true'
+})
 
 const nextConfig = {
+  reactStrictMode: true,
   /**
    * Required for next-optimized-images to
    * optimize images
@@ -40,9 +43,6 @@ module.exports = withPlugins(
     ],
     [
       withBundleAnalyzer,
-      {
-        enabled: process.env.ANALYZE === 'true',
-      },
     ],
   ],
   nextConfig
