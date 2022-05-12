@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import cx from 'classnames';
 import {createStyles, Center} from '@mantine/core';
-import Image from '../components/Image';
-import {getAllPosts, Post} from '../utils/posts';
+import Image from '../../components/Image';
+import {getAllPosts, Post} from '../../utils/posts';
 
 interface Props {
   posts: Post[];
