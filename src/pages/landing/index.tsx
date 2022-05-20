@@ -95,6 +95,11 @@ const Index = ({posts}: Props) => {
               &nbsp;
               - A simple music player.
             </li>
+            <li>
+              »
+              &nbsp;
+              PilePost - A queuing service for blog posts. (coming soon)
+            </li>
           </ul>
         </div>
 

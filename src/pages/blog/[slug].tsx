@@ -33,6 +33,9 @@ const useStyles = createStyles(theme => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
+    [theme.fn.largerThan('md')]: {
+      maxWidth: 700,
+    },
 
     h1: {
       fontSize: '2rem',
@@ -103,6 +106,7 @@ const BlogPost = ({post}: PostProps) => {
                           fontFamily: 'Fira-Code',
                           textShadow: 'none',
                           marginBottom: '3rem',
+                          maxWidth: 700,
                         }}
                         {...props}
                       />
