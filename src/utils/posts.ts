@@ -9,6 +9,7 @@ export const getPostSlugs = () => fs.readdirSync(postsDirectory);
 export interface Post {
   slug: string;
   title: string;
+  description: string;
   date: string;
   content: string;
 }

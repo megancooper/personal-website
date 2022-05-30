@@ -1,9 +1,10 @@
 ---
-title: Omitting types in TypeScript
+title: Omitting properties in TypeScript
+description: How I discovered that TypeScript can omit properties in types
 date: 2022-05-20
 ---
 
-# Omitting types in TypeScript
+# Omitting properties in TypeScript
 
 *May 20, 2022*
 

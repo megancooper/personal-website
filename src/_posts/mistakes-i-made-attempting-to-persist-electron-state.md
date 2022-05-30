@@ -1,5 +1,6 @@
 ---
 title: Mistakes I made attempting to persist electron state
+description: How to persist electron state in a performant way
 date: 2022-04-03
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Habits to grow as a software engineer
+description: Little tid-bits and habits that have helped me to grow as a software engineer.
 date: 2022-03-27
 ---
 

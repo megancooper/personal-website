@@ -80,6 +80,8 @@ const BlogPost = ({post}: PostProps) => {
               {post.title}
               &nbsp;|&nbsp;Megan Cooper
             </title>
+            <meta name="description" content={post.description} />
+            <meta name="robots" content="index, follow" />
           </Head>
           <Center className={classes.wrapper}>
             <div className={classes.blogPost}>
