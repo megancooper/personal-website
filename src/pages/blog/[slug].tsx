@@ -107,6 +107,7 @@ const BlogPost = ({post}: PostProps) => {
                           textShadow: 'none',
                           marginBottom: '3rem',
                           maxWidth: 700,
+                          fontSize: '0.95rem',
                         }}
                         {...props}
                       />
