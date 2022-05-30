@@ -32,9 +32,9 @@ const useStyles = createStyles(theme => ({
     flexDirection: 'column',
   },
   link: {
-    color: '#1D8CFA',
+    color: 'black',
     textDecoration: 'none',
-    borderBottom: '1px solid #1D8CFA',
+    borderBottom: '1px solid black',
     width: 'fit-content',
   },
   blogLink: {
@@ -89,16 +89,13 @@ const Index = ({posts}: Props) => {
 
           <ul className={classes.list}>
             <li>
-              »
-              &nbsp;
+              »&nbsp;
               <a target="_blank" rel="noreferrer" href="https://www.melo-app.org" className={classes.link}>Melo</a>
               &nbsp;
               - A simple music player.
             </li>
             <li>
-              »
-              &nbsp;
-              PilePost - A queuing service for blog posts. (coming soon)
+              »&nbsp;PilePost - A queuing service for blog posts. (coming soon)
             </li>
           </ul>
         </div>
