@@ -62,7 +62,7 @@ const Index = ({posts}: Props) => {
         <Image className={classes.profilePic} alt="profile" src="profile.jpg" height="160" width="240" />
 
         <p className={cx(classes.blurb, classes.section)}>
-          Hello! I&apos;m Megan, a software engineer based in Austin, TX.
+          Hello! I&apos;m Megan, a software engineer based in Portland, OR.
           I enjoy writing code and wearing wacky socks.
         </p>
 
