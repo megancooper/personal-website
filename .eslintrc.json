@@ -4,7 +4,11 @@
         "project": ["./tsconfig.json"]
     },
     "plugins": ["@typescript-eslint"],
-    "extends": ["airbnb-typescript"],
+    "extends": [
+        "next/core-web-vitals",
+        "airbnb-typescript",
+        "plugin:prettier/recommended"
+    ],
     "rules": {
         "@typescript-eslint/object-curly-spacing": "off",
         "react/react-in-jsx-scope": "off",
@@ -23,7 +27,13 @@
         "template-curly-spacing": 2,
         "array-bracket-spacing": ["error", "never"],
         "object-curly-spacing": ["error", "never"],
-        "semi": ["error", "always"]
+        "import/prefer-default-export": "off",
+        "semi": ["error", "always"],
+        "no-extra-parens": 0,
+        "prettier/prettier": ["error", {
+            "bracketSpacing": false,
+            "arrowParens": "avoid"
+        }]
     },
     "ignorePatterns": ["next.config.js"]
 }

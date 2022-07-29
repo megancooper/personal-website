@@ -3,8 +3,10 @@
         "source.fixAll.eslint": true
     },
     "cSpell.words": [
+        "cloudinary",
         "mantine",
         "Melo",
-        "mozjpeg"
+        "mozjpeg",
+        "parens"
     ]
 }

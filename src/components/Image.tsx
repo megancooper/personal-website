@@ -1,36 +1,50 @@
-/* eslint-disable global-require */
-/* eslint-disable import/no-dynamic-require */
-interface Props {
-  src: string;
-  width: string;
-  height: string;
+import React, {useEffect, useState} from "react";
+import NextImage from "next/image";
+import {buildUrl} from "cloudinary-build-url";
+import {TransformerOption} from "@cld-apis/types";
+
+const CLOUDINARY_CLOUD_NAME = "dbfgjzwih";
+
+const buildImageUrl = ({
+  imageId,
+  transformations = {},
+}: {
+  imageId: string;
+  transformations?: TransformerOption;
+}) =>
+  buildUrl(imageId, {
+    cloud: {cloudName: CLOUDINARY_CLOUD_NAME},
+    transformations,
+  });
+
+export const Image: React.FC<{
+  imageId: string;
+  width: number;
+  height: number;
   alt: string;
   className?: string;
-}
+}> = ({width, height, alt, imageId, className = ""}) => {
+  const url = buildImageUrl({imageId});
+  const urlBlurred = buildImageUrl({
+    imageId,
+    transformations: {effect: {name: "blur", value: 750}, quality: 50},
+  });
 
-const Image = ({
-  src, width, height, alt, className,
-}: Props): JSX.Element => {
-  const webp = require(`../../public/assets/${src}?resize&format=webp`);
-  const img = require(`../../public/assets/${src}?resize`);
+  const [image, setImage] = useState<string>(urlBlurred);
+  useEffect(() => {
+    setTimeout(() => {
+      setImage(url);
+    }, 400);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
-    <picture>
-      <source srcSet={webp.srcSet} type="image/webp" />
-      <img
-        src={img.src}
-        srcSet={img.srcSet}
-        width={width}
-        height={height}
-        alt={alt}
-        className={className}
-      />
-    </picture>
+    <NextImage
+      className={className}
+      src={image}
+      alt={alt}
+      width={width}
+      height={height}
+    />
   );
 };
-
-Image.defaultProps = {
-  className: '',
-};
-
-export default Image;

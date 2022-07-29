@@ -1,5 +1,4 @@
 const withPlugins = require('next-compose-plugins');
-const withOptimizedImages = require('next-optimized-images');
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true'
 })
@@ -18,7 +17,10 @@ const nextConfig = {
    * optimize images
    */
   images: {
-    disableStaticImages: true,
+    // disableStaticImages: true,
+    domains: [
+      'res.cloudinary.com'
+    ],
   },
   async rewrites() {
     return [
@@ -27,27 +29,21 @@ const nextConfig = {
         destination: '/landing',
       },
     ]
+  },
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"]
+    });
+
+    return config;
   }
 }
 
+module.exports = nextConfig;
+
 module.exports = withPlugins(
   [
-    [
-      withOptimizedImages,
-      {
-        optimizeImagesInDev: true,
-        mozjpeg: {
-          quality: 90,
-        },
-        webp: {
-          preset: 'default',
-          quality: 90,
-        },
-        responsive: {
-          adapter: require('responsive-loader/sharp')
-        }
-      },
-    ],
     [
       withBundleAnalyzer,
     ],
