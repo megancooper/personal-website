@@ -138,8 +138,20 @@ const Index = ({posts}: Props) => {
         </div>
 
         <div className={classes.section}>
-          Current projects:
+          Projects:
           <ul className={classes.list}>
+            <li>
+              »&nbsp;
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.achilles.run"
+                className={classes.link}
+              >
+                Achilles
+              </a>
+              &nbsp; - A visualizer for the apollo tracing extension.
+            </li>
             <li>
               »&nbsp;
               <a
@@ -151,9 +163,6 @@ const Index = ({posts}: Props) => {
                 Melo
               </a>
               &nbsp; - A simple music player.
-            </li>
-            <li>
-              »&nbsp;PilePost - A queueing service for blog posts. (coming soon)
             </li>
           </ul>
         </div>
