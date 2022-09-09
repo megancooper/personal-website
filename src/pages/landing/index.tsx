@@ -157,6 +157,18 @@ const Index = ({posts}: Props) => {
               <a
                 target="_blank"
                 rel="noreferrer"
+                href="https://www.cragsense.com"
+                className={classes.link}
+              >
+                CragSense
+              </a>
+              &nbsp; - See weather conditions for climbing locations.
+            </li>
+            <li>
+              »&nbsp;
+              <a
+                target="_blank"
+                rel="noreferrer"
                 href="https://www.melo-app.org"
                 className={classes.link}
               >
